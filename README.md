@@ -5,4 +5,4 @@ Nesta primeira aula, vamos construir uma aplicação do zero para consumir a API
 ![imersao-java-alura](https://github.com/Trasiblo/alura-stickers/blob/main/telas/cores-terminal.PNG)
 
 # Tela com Resultado aula 02
-![imersao-java-alura](https://github.com/Trasiblo/alura-stickers/blob/main/telas/saida_imagens.png)
+![imersao-java-alura](https://github.com/Trasiblo/alura-stickers/blob/aula02/telas/saida_imagens.png)
