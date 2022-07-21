@@ -11,12 +11,8 @@ public class App {
         String CorCampo = CorResetar + "\u001b[30;1m";
 
         // fazer uma conexao http e buscar top 250 filmes
-        //String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/TopMovies.json";
-        //String url = "https://alura-imdb-api.herokuapp.com/movies";
-        // ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
-
-        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD.json";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+        String url = Dados.NASA.url;
+        ExtratorDeConteudo extrator = Dados.NASA.extratorDeConteudo;
 
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
@@ -50,5 +46,26 @@ public class App {
             System.out.println();
         }
 
+    }
+
+
+    public enum Dados {
+        IMDB("https://alura-imdb-api.herokuapp.com/movies", new ExtratorDeConteudoDoIMDB()),
+        NASA("https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD.json", new ExtratorDeConteudoDaNasa());
+         
+        private final String url;
+        private final ExtratorDeConteudo extratorDeConteudo;
+ 
+        Dados(String url, ExtratorDeConteudo extratorDeConteudo) {
+            this.url = url;
+            this.extratorDeConteudo = extratorDeConteudo;
+        }
+ 
+        public String getUrl() {
+            return this.url;
+        }
+        public ExtratorDeConteudo getExtratorDeConteudo() {
+            return this.extratorDeConteudo;
+        }
     }
 }
