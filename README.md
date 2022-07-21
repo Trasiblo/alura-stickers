@@ -5,6 +5,4 @@ Nesta primeira aula, vamos construir uma aplicação do zero para consumir a API
 
 1- Transformar a classe que representa os conteúdos em um Record
 
-```java
-public record Conteudo(String titulo, String urlImagem) {}
-```
+https://github.com/Trasiblo/alura-stickers/blob/42dbae1680e9914ae6443bdab2120578ca16b94d/src/Conteudo.java#L1
