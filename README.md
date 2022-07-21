@@ -6,3 +6,11 @@ Nesta primeira aula, vamos construir uma aplicação do zero para consumir a API
 
 # Tela com Resultado aula 02
 ![imersao-java-alura](https://github.com/Trasiblo/alura-stickers/blob/aula02/telas/saida_imagens.png)
+
+# Resultado aula 03
+
+1- Transformar a classe que representa os conteúdos em um Record
+
+```java
+public record Conteudo(String titulo, String urlImagem) {}
+```

@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 public class GeradoraDeFigurinhas {
     
 
-    public void cria(InputStream inputStream, String nomeArquivo, Float classificacao) throws Exception {
+    public void cria(InputStream inputStream, String nomeArquivo) throws Exception {
 
         // leitura da imagem
         // InputStream inputStream = 
@@ -43,16 +43,7 @@ public class GeradoraDeFigurinhas {
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        String Texto = "";
-        
-        // personalizar texto
-        if ((classificacao >= 9.0) && (classificacao <= 9.2)) {
-            Texto = "EXECENTE";            
-        } else if ((classificacao >= 8.7) && (classificacao <= 8.9)) {
-            Texto = "BOM";
-        } else if((classificacao >= 8.4) && (classificacao <= 8.6)){
-            Texto = "MENOS BOM";
-        } 
+        String Texto = "EXCELENTE";
         
         int qtdCaracter = Texto.length();
         //a largura cabe 18 caracter / 2 para centralizar texto
